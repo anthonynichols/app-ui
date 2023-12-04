@@ -1,0 +1,16 @@
+.AppUI-Column {
+    display: flex;
+    flex-direction: column;
+
+    width: 100px;
+}
+
+.AppUI-Column--left {
+    grid-column: column-left-start / column-left-end;
+    grid-row: column-start / column-end;
+}
+
+.AppUI-Column--right {
+    grid-column: column-right-start / column-right-end;
+    grid-row: column-start / column-end;
+}

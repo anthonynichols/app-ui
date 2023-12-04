@@ -1,0 +1,134 @@
+.AppUI-Panel {
+    /* border: 2px inset #870000; */
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+    background-color: hsla(0, 0%, 18%, 0.2);
+}
+
+.AppUI-Panel--top-alert {
+    grid-column: top-alert-start / top-alert-end;
+    grid-row: top-alert-start / top-alert-end;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.AppUI-Panel--top-menu {
+    grid-column: top-menu-start / top-menu-end;
+    grid-row: top-menu-start / top-menu-end;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.AppUI-Panel--top-info {
+    grid-column: top-info-start / top-info-end;
+    grid-row: top-info-start / top-info-end;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.AppUI-Panel--left-menu {
+    grid-column: left-menu-start / left-menu-end;
+    grid-row: left-menu-start / left-menu-end;
+    height: 100%;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.AppUI-Panel--left-info {
+    grid-column: left-info-start / left-info-end;
+    grid-row: left-info-start / left-info-end;
+    height: 100%;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.AppUI-Panel--right-menu {
+    grid-column: right-menu-start / right-menu-end;
+    grid-row: right-menu-start / right-menu-end;
+    height: 100%;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.AppUI-Panel--right-info {
+    grid-column: right-info-start / right-info-end;
+    grid-row: right-info-start / right-info-end;
+    height: 100%;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.AppUI-Panel--bottom-info {
+    grid-column: bottom-info-start / bottom-info-end;
+    grid-row: bottom-info-start / bottom-info-end;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.AppUI-Panel--bottom-menu {
+    grid-column: bottom-menu-start / bottom-menu-end;
+    grid-row: bottom-menu-start / bottom-menu-end;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.AppUI-Panel--bottom-alert {
+    grid-column: bottom-alert-start / bottom-alert-end;
+    grid-row: bottom-alert-start / bottom-alert-end;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.AppUI-Panel--body {
+    background-color: revert;
+    grid-column: body-start / body-end;
+    grid-row: body-start / body-end;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.AppUI-Panel.is-hidden {
+    display: none;
+}

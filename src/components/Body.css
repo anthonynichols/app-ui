@@ -1,0 +1,11 @@
+.AppUI-Body {
+    display: flex;
+    flex-direction: column;
+    grid-column: body-start / body-end;
+    grid-row: body-start / body-end;
+    position: relative;
+}
+
+.AppUI-Body-Content {
+    flex-basis: 100%;
+}
