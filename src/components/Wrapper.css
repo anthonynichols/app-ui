@@ -1,23 +1,20 @@
 .AppUI-Wrapper {
-    background-color: hsla(0, 0%, 0%, 0.2);
-    display: grid;
-
-    grid-template-columns:
-        [top-alert-start top-menu-start left-menu-start bottom-menu-start bottom-alert-start]
-            minmax(0, max-content)
-        [left-menu-end top-info-start left-info-start bottom-info-start]
-            minmax(0, max-content)
-        [left-info-end body-start]
-            1fr
-        [body-end right-info-start]
-            minmax(0, max-content)
-        [right-info-end top-info-end bottom-info-end right-menu-start]
-            minmax(0, max-content)
-        [right-menu-end top-alert-end top-menu-end bottom-menu-end bottom-alert-end];
-    grid-template-rows: [top-alert-start] minmax(0, max-content) [top-alert-end top-menu-start] minmax(0, max-content) [top-menu-end left-menu-start top-info-start right-menu-start] minmax(0, max-content) [top-info-end left-info-start body-start right-info-start]
-     1fr [left-info-end body-end right-info-end bottom-info-start] minmax(0, max-content) [left-menu-end bottom-info-end right-menu-end bottom-menu-start] minmax(0, max-content) [bottom-menu-end bottom-alert-start] minmax(0, max-content) [bottom-alert-end] minmax(0, max-content);
-
-    height: 100vh;
-    position: relative;
-    width: 100vw;
+  display: grid;
+  grid-template-columns:
+    [top-alert-start top-menu-start left-menu-start bottom-menu-start bottom-alert-start]
+        minmax(0, max-content)
+    [left-menu-end top-info-start left-info-start bottom-info-start]
+        minmax(0, max-content)
+    [left-info-end body-start]
+        1fr
+    [body-end right-info-start]
+        minmax(0, max-content)
+    [right-info-end top-info-end bottom-info-end right-menu-start]
+        minmax(0, max-content)
+    [right-menu-end top-alert-end top-menu-end bottom-menu-end bottom-alert-end];
+  grid-template-rows: [top-alert-start] minmax(0, max-content) [top-alert-end top-menu-start] minmax(0, max-content) [top-menu-end left-menu-start top-info-start right-menu-start] minmax(0, max-content) [top-info-end left-info-start body-start right-info-start]
+    1fr [left-info-end body-end right-info-end bottom-info-start] minmax(0, max-content) [left-menu-end bottom-info-end right-menu-end bottom-menu-start] minmax(0, max-content) [bottom-menu-end bottom-alert-start] minmax(0, max-content) [bottom-alert-end] minmax(0, max-content);
+  height: 100vh;
+  position: relative;
+  width: 100vw;
 }

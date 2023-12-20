@@ -1,65 +1,77 @@
-import {useState} from 'react';
-
 import * as AppUI from './AppUI';
+import {uiState} from './ui-state';
 
 import './App.css';
 
-export function App() {
-  let [topAlertIsHidden, setTopAlertIsHidden] = useState(false);
-  let [topMenuIsHidden, setTopMenuIsHidden] = useState(false);
-  let [topInfoIsHidden, setTopInfoIsHidden] = useState(false);
-  let [bottomAlertIsHidden, setBottomAlertIsHidden] = useState(false);
-  let [bottomMenuIsHidden, setBottomMenuIsHidden] = useState(false);
-  let [bottomInfoIsHidden, setBottomInfoIsHidden] = useState(false);
-  let [leftMenuIsHidden, setLeftMenuIsHidden] = useState(false);
-  let [leftInfoIsHidden, setLeftInfoIsHidden] = useState(false);
-  let [rightInfoIsHidden, setRightInfoIsHidden] = useState(false);
-  let [rightMenuIsHidden, setRightMenuIsHidden] = useState(false);
+uiState.bottomAlert.isHidden.value = true;
+uiState.bottomMenu.isHidden.value = true;
+uiState.rightInfo.isHidden.value = true;
+uiState.rightMenu.isHidden.value = true;
+uiState.leftInfo.isHidden.value = true;
+uiState.topInfo.isHidden.value = true;
 
+export function App() {
   return (
     <AppUI.Wrapper>
-      <AppUI.Panel name="top-alert" isHidden={topAlertIsHidden}>
-        TOP ALERT
+      <AppUI.Panel name="top-alert" isHidden={uiState.topAlert.isHidden.value}>
+        <span className="top-alert-message">This is where top alert messages would go, potentially spanning across the entire app.</span>
+        <span className="top-alert-close" onClick={uiState.topAlert.toggleHidden}>X</span>
       </AppUI.Panel>
-      <AppUI.Panel name="top-menu" isHidden={topMenuIsHidden}>
+      <AppUI.Panel name="top-menu" isHidden={uiState.topMenu.isHidden.value}>
         TOP MENU
       </AppUI.Panel>
-      <AppUI.Panel name="top-info" isHidden={topInfoIsHidden}>
+      <AppUI.Panel name="top-info" isHidden={uiState.topInfo.isHidden.value}>
         TOP INFO
       </AppUI.Panel>
-      <AppUI.Panel name="bottom-info" isHidden={bottomInfoIsHidden}>
+      <AppUI.Panel name="bottom-info" isHidden={uiState.bottomInfo.isHidden.value}>
         BOTTOM INFO
       </AppUI.Panel>
-      <AppUI.Panel name="bottom-menu" isHidden={bottomMenuIsHidden}>
+      <AppUI.Panel name="bottom-menu" isHidden={uiState.bottomMenu.isHidden.value}>
         BOTTOM MENU
       </AppUI.Panel>
-      <AppUI.Panel name="bottom-alert" isHidden={bottomAlertIsHidden}>
+      <AppUI.Panel name="bottom-alert" isHidden={uiState.bottomAlert.isHidden.value}>
         BOTTOM ALERT
       </AppUI.Panel>
-      <AppUI.Panel name="left-menu" isHidden={leftMenuIsHidden}>
+      <AppUI.Panel name="left-menu" isHidden={uiState.leftMenu.isHidden.value}>
         LEFT MENU
       </AppUI.Panel>
-      <AppUI.Panel name="left-info" isHidden={leftInfoIsHidden}>
+      <AppUI.Panel name="left-info" isHidden={uiState.leftInfo.isHidden.value}>
         LEFT INFO
       </AppUI.Panel>
-      <AppUI.Panel name="right-info" isHidden={rightInfoIsHidden}>
+      <AppUI.Panel name="right-info" isHidden={uiState.rightInfo.isHidden.value}>
         RIGHT INFO
       </AppUI.Panel>
-      <AppUI.Panel name="right-menu" isHidden={rightMenuIsHidden}>
+      <AppUI.Panel name="right-menu" isHidden={uiState.rightMenu.isHidden.value}>
         RIGHT MENU
       </AppUI.Panel>
       <AppUI.Panel name="body">
-        <button onClick={() => setTopAlertIsHidden(!topAlertIsHidden)}>Toggle Top Alert</button>
-        <button onClick={() => setTopMenuIsHidden(!topMenuIsHidden)}>Toggle Top Menu</button>
-        <button onClick={() => setTopInfoIsHidden(!topInfoIsHidden)}>Toggle Top Info</button>
-        <button onClick={() => setLeftMenuIsHidden(!leftMenuIsHidden)}>Toggle Left Menu</button>
-        <button onClick={() => setLeftInfoIsHidden(!leftInfoIsHidden)}>Toggle Left Info</button>
-        <button onClick={() => setRightInfoIsHidden(!rightInfoIsHidden)}>Toggle Right Info</button>
-        <button onClick={() => setRightMenuIsHidden(!rightMenuIsHidden)}>Toggle Right Menu</button>
-        <button onClick={() => setBottomInfoIsHidden(!bottomInfoIsHidden)}>Toggle Bottom Info</button>
-        <button onClick={() => setBottomMenuIsHidden(!bottomMenuIsHidden)}>Toggle Bottom Menu</button>
-        <button onClick={() => setBottomAlertIsHidden(!bottomAlertIsHidden)}>Toggle Bottom Alert</button>
+        <div className="main-content">
+          {Array.from(Array(100)).map(() => <ListThing />)}
+        </div>
       </AppUI.Panel>
     </AppUI.Wrapper>
   );
+}
+
+function PanelButtons() {
+  return (
+    <>
+      <button onClick={uiState.topAlert.toggleHidden}>Toggle Top Alert</button>
+      <button onClick={uiState.topMenu.toggleHidden}>Toggle Top Menu</button>
+      <button onClick={uiState.topInfo.toggleHidden}>Toggle Top Info</button>
+      <button onClick={uiState.leftMenu.toggleHidden}>Toggle Left Menu</button>
+      <button onClick={uiState.leftInfo.toggleHidden}>Toggle Left Info</button>
+      <button onClick={uiState.rightInfo.toggleHidden}>Toggle Right Info</button>
+      <button onClick={uiState.rightMenu.toggleHidden}>Toggle Right Menu</button>
+      <button onClick={uiState.bottomInfo.toggleHidden}>Toggle Bottom Info</button>
+      <button onClick={uiState.bottomMenu.toggleHidden}>Toggle Bottom Menu</button>
+      <button onClick={uiState.bottomAlert.toggleHidden}>Toggle Bottom Alert</button>
+    </>
+  );
+}
+
+function ListThing() {
+  return (
+    <p className="list-thing">List item</p>
+  )
 }

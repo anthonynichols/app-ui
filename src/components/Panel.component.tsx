@@ -4,17 +4,17 @@ import {ReactNode} from 'react';
 import './Panel.css';
 
 type PanelName =
-  | 'top-alert'
-  | 'top-menu'
-  | 'top-info'
+  | 'body'
   | 'bottom-alert'
-  | 'bottom-menu'
   | 'bottom-info'
-  | 'left-menu'
+  | 'bottom-menu'
   | 'left-info'
+  | 'left-menu'
   | 'right-info'
   | 'right-menu'
-  | 'body';
+  | 'top-alert'
+  | 'top-info'
+  | 'top-menu';
 
 export interface PanelProps {
   children?: ReactNode;
