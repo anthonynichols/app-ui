@@ -1,5 +1,5 @@
 :root {
-  --panel-left-menu-width: 240px;
+  --appui-panel-left-menu-width: 240px;
 }
 
 .AppUI-Wrapper {
@@ -50,23 +50,24 @@
 
 .AppUI-Panel--right-menu {
   border-left: inset 1px hsla(0, 0%, 100%, 0.2);
+
+  &.is-minimized {
+    --appui-panel-right-menu-width: 10px;
+  }
 }
 
 .AppUI-Panel--right-info {
   border-left: inset 1px hsla(0, 0%, 100%, 0.2);
 }
 
-.AppUI-Panel--body {
-  /* overflow: hidden; */
-}
-
-main {
-  overflow: hidden;
+.right-menu-content {
+  height: 100%;
+  overflow-y: auto;
 }
 
 .main-content {
-  max-height: 100%;
-  width: 100%;
+  height: 100%;
+  overflow-y: auto;
 }
 
 .top-alert-message {

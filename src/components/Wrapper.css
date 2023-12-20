@@ -15,6 +15,5 @@
   grid-template-rows: [top-alert-start] minmax(0, max-content) [top-alert-end top-menu-start] minmax(0, max-content) [top-menu-end left-menu-start top-info-start right-menu-start] minmax(0, max-content) [top-info-end left-info-start body-start right-info-start]
     1fr [left-info-end body-end right-info-end bottom-info-start] minmax(0, max-content) [left-menu-end bottom-info-end right-menu-end bottom-menu-start] minmax(0, max-content) [bottom-menu-end bottom-alert-start] minmax(0, max-content) [bottom-alert-end] minmax(0, max-content);
   height: 100vh;
-  position: relative;
   width: 100vw;
 }

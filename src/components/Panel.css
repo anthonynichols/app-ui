@@ -1,29 +1,29 @@
 :root {
-  --panel-bottom-alert-height: 40px;
-  --panel-bottom-alert-width: 100%;
-  --panel-bottom-info-height: 40px;
-  --panel-bottom-info-width: 100%;
-  --panel-bottom-menu-height: 40px;
-  --panel-bottom-menu-width: 100%;
-  --panel-left-info-height: 100%;
-  --panel-left-info-width: 120px;
-  --panel-left-menu-height: 100%;
-  --panel-left-menu-width: 120px;
-  --panel-right-info-height: 100%;
-  --panel-right-info-width: 120px;
-  --panel-right-menu-height: 100%;
-  --panel-right-menu-width: 120px;
-  --panel-top-alert-height: 40px;
-  --panel-top-alert-width: 100%;
-  --panel-top-info-height: 40px;
-  --panel-top-info-width: 100%;
-  --panel-top-menu-height: 40px;
-  --panel-top-menu-width: 100%;
+  --appui-panel-bottom-alert-height: 40px;
+  --appui-panel-bottom-alert-width: 100%;
+  --appui-panel-bottom-info-height: 40px;
+  --appui-panel-bottom-info-width: 100%;
+  --appui-panel-bottom-menu-height: 40px;
+  --appui-panel-bottom-menu-width: 100%;
+  --appui-panel-left-info-height: 100%;
+  --appui-panel-left-info-width: 120px;
+  --appui-panel-left-menu-height: 100%;
+  --appui-panel-left-menu-width: 120px;
+  --appui-panel-right-info-height: 100%;
+  --appui-panel-right-info-width: 120px;
+  --appui-panel-right-menu-height: 100%;
+  --appui-panel-right-menu-width: 120px;
+  --appui-panel-top-alert-height: 40px;
+  --appui-panel-top-alert-width: 100%;
+  --appui-panel-top-info-height: 40px;
+  --appui-panel-top-info-width: 100%;
+  --appui-panel-top-menu-height: 40px;
+  --appui-panel-top-menu-width: 100%;
 }
 
 .AppUI-Panel {
-  display: flex;
   margin: 0;
+  overflow: hidden;
   padding: 0;
 }
 
@@ -31,126 +31,77 @@
   display: none;
 }
 
-.AppUI-Panel.is-minimized {}
-
 .AppUI-Panel--body {
-  background-color: revert;
   grid-column: body-start / body-end;
   grid-row: body-start / body-end;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: start;
 }
 
 .AppUI-Panel--bottom-info {
   grid-column: bottom-info-start / bottom-info-end;
   grid-row: bottom-info-start / bottom-info-end;
-  height: var(--panel-bottom-info-height);
-  width: var(--panel-bottom-info-width);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  height: var(--appui-panel-bottom-info-height);
+  width: var(--appui-panel-bottom-info-width);
 }
 
 .AppUI-Panel--bottom-menu {
   grid-column: bottom-menu-start / bottom-menu-end;
   grid-row: bottom-menu-start / bottom-menu-end;
-  height: var(--panel-bottom-info-height);
-  width: var(--panel-bottom-info-width);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  height: var(--appui-panel-bottom-info-height);
+  width: var(--appui-panel-bottom-info-width);
 }
 
 .AppUI-Panel--bottom-alert {
   grid-column: bottom-alert-start / bottom-alert-end;
   grid-row: bottom-alert-start / bottom-alert-end;
-  height: var(--panel-bottom-info-height);
-  width: var(--panel-bottom-info-width);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  height: var(--appui-panel-bottom-info-height);
+  width: var(--appui-panel-bottom-info-width);
 }
 
 .AppUI-Panel--left-menu {
   grid-column: left-menu-start / left-menu-end;
   grid-row: left-menu-start / left-menu-end;
-  height: var(--panel-left-menu-height);
-  width: var(--panel-left-menu-width);
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
+  height: var(--appui-panel-left-menu-height);
+  width: var(--appui-panel-left-menu-width);
 }
 
 .AppUI-Panel--left-info {
   grid-column: left-info-start / left-info-end;
   grid-row: left-info-start / left-info-end;
-  height: var(--panel-left-info-height);
-  width: var(--panel-left-info-width);
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
+  height: var(--appui-panel-left-info-height);
+  width: var(--appui-panel-left-info-width);
 }
 
 .AppUI-Panel--right-menu {
   grid-column: right-menu-start / right-menu-end;
   grid-row: right-menu-start / right-menu-end;
-  height: var(--panel-right-menu-height);
-  width: var(--panel-right-menu-width);
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
+  height: var(--appui-panel-right-menu-height);
+  width: var(--appui-panel-right-menu-width);
 }
 
 .AppUI-Panel--right-info {
   grid-column: right-info-start / right-info-end;
   grid-row: right-info-start / right-info-end;
-  height: var(--panel-right-info-height);
-  width: var(--panel-right-info-width);
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
+  height: var(--appui-panel-right-info-height);
+  width: var(--appui-panel-right-info-width);
 }
 
 .AppUI-Panel--top-alert {
   grid-column: top-alert-start / top-alert-end;
   grid-row: top-alert-start / top-alert-end;
-  height: var(--panel-top-alert-height);
-  width: var(--panel-top-alert-width);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  height: var(--appui-panel-top-alert-height);
+  width: var(--appui-panel-top-alert-width);
 }
 
 .AppUI-Panel--top-info {
   grid-column: top-info-start / top-info-end;
   grid-row: top-info-start / top-info-end;
-  height: var(--panel-top-info-height);
-  width: var(--panel-top-info-width);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  height: var(--appui-panel-top-info-height);
+  width: var(--appui-panel-top-info-width);
 }
 
 .AppUI-Panel--top-menu {
   grid-column: top-menu-start / top-menu-end;
   grid-row: top-menu-start / top-menu-end;
-  height: var(--panel-top-menu-height);
-  width: var(--panel-top-menu-width);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  height: var(--appui-panel-top-menu-height);
+  width: var(--appui-panel-top-menu-width);
 }
