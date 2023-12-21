@@ -1,5 +1,5 @@
 import {clsx} from 'clsx';
-import {ReactNode} from 'react';
+import {type ReactNode} from 'react';
 
 import './Panel.css';
 
@@ -17,6 +17,7 @@ type PanelName =
   | 'top-menu';
 
 export interface PanelProps {
+  className?: string;
   children?: ReactNode;
   isHidden?: boolean;
   isMinimized?: boolean;
@@ -29,7 +30,7 @@ export function Panel(props: PanelProps) {
     props.name && `AppUI-Panel--${props.name}`,
     props.isHidden && 'is-hidden',
     props.isMinimized && 'is-minimized',
+    props.className,
   );
-
   return <div className={className}>{props.children}</div>;
 }
